@@ -1,0 +1,11 @@
+<div class="form-group">
+	<label for="userName">User Name</label>
+	<!-- <input type="text" id="userName" class="form-control" (input)="onUserNameInput()" [(ngModel)]="userName" autocomplete="off"> -->
+	<input type="text" id="userName" class="form-control" [(ngModel)]="userName" autocomplete="off">
+</div>
+
+<div>
+	<p class="p-username">{{ userName }}</p>
+</div>
+
+<button type="submit" class="btn btn-primary" (click)="onReset()" [disabled]="userName === ''">Reset</button>

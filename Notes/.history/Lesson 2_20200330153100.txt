@@ -1,0 +1,40 @@
+Data Binding
+------------
+- Dynamism
+- Sometimes we might want to pass the data from typescript file to template and vice versa.
+	* In the above scenario we can use data binding
+	* Types of Data Binding
+		- One Way Data Binding
+			* String Interpolation: <h1>{{ <<variable_name>> }}</h1>
+			* Property Binding: <p [property]="data"></p>
+		- Event Binding
+			* It's used for action listeners for templates
+		- Two Way Data Binding
+			* ngModel Directive
+			* It can listen to the variable and change it's value and it can also change the value of variable on change
+			* Example: <input type="text" [(ngModel)]="<<variable_name>>">
+
+
+
+String Interpolation in action
+------------------------------
+- One way data binding
+- Typescript to HTML
+- We can use anything inside a String Interpolation given the data must be String
+- We can also call a function which returns String
+- We can add anything which returns string in a single line
+
+
+Property Binding
+----------------
+- Dynamically bind the data to the property of any HTML Tag
+- Syntax: [<<property_name>>]="<<variable_name>>"
+
+
+Note: Use property binding whenever you want to change the value of the attribute, if you just want's to bind the data to the tag then use String Interpolation
+
+
+Event Binding
+-------------
+- Action listeners for HTML tags onClick, onTextChange etc.
+- In Angular we can use event binding to perform some event on User's Action

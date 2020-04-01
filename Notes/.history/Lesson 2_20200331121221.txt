@@ -1,0 +1,73 @@
+Data Binding
+------------
+- Communication between HTML and Typescript
+- Dynamism
+- Sometimes we might want to pass the data from typescript file to template and vice versa.
+	* In the above scenario we can use data binding
+	* Types of Data Binding
+		- One Way Data Binding
+			* String Interpolation: <h1>{{ <<variable_name>> }}</h1>
+			* Property Binding: <p [property]="data"></p>
+		- Event Binding
+			* It's used for action listeners for templates
+		- Two Way Data Binding
+			* ngModel Directive
+			* It can listen to the variable and change it's value and it can also change the value of variable on change
+			* Example: <input type="text" [(ngModel)]="<<variable_name>>">
+
+
+
+String Interpolation in action
+------------------------------
+- One way data binding
+- Typescript to HTML
+- We can use anything inside a String Interpolation given the data must be String
+- We can also call a function which returns String
+- We can add anything which returns string in a single line
+
+
+Property Binding
+----------------
+- Dynamically bind the data to the property of any HTML Tag
+- Syntax: [<<property_name>>]="<<variable_name>>"
+
+
+Note: Use property binding whenever you want to change the value of the attribute, if you just want's to bind the data to the tag then use String Interpolation
+
+
+Event Binding
+-------------
+- Action listeners for HTML tags onClick, onTextChange etc.
+- In Angular we can use event binding to perform some event on User's Action
+- Syntax: <button (<<event_name>>)="<<angular_code>>"></button>
+- Example:
+	1. <button (click)="onCreateServer()"></button>
+	2. <button (click)="serverCreationStatus='Server created successfully'"></button>
+
+
+Two-way data binding
+--------------------
+- It's done using [(ngModel)] directive
+- [()] represents two-way data binding
+- Two-way data binding means the tag will listen as well as output the data to typescript
+
+
+
+Directives
+----------
+- One of the main building block of Angular
+- Directives are instructions to the DOM
+- It asks DOM to do something for it
+- Directives are mostly used as attribute selector but same as component we can use directive as a tag selector or a class selector
+- There are many built-in directives in Angular
+- Directives can be defined using @Directive decorator
+- Components are also kind of directives only, where we ask DOM to place our component against the selector
+
+Structural Directive
+--------------------
+- Structural directive starts with *
+- Structural directives are directives which changes the DOM Structure
+- Examples:
+i. *ngif
+ii. ngStyle is used to apply style to an Angular template
+- ngStyle is very powerful with property binding where we can dynamically set the value of style through typescript code

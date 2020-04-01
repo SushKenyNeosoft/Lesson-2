@@ -1,0 +1,9 @@
+Data Binding
+------------
+- Dynamism
+- Sometimes we might want to pass the data from typescript file to template and vice versa.
+	* In the above scenario we can use data binding
+	* Types of Data Binding
+		- One Way Data Binding
+			* String Interpolation: <h1>{{ <<variable_name>> }}</h1>
+			* Property Binding: <p [property]="data"></p>
